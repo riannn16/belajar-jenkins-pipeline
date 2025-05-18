@@ -21,7 +21,7 @@ pipeline {
     }
 
     stages {
-        
+
         stage("Parameter"){
             agent {
                 node {
@@ -32,7 +32,7 @@ pipeline {
         steps {
             echo "Hello ${params.NAME}"
             echo "You description is ${params.DESCRIPTION}"
-            echo "Youe social media ${params.SOCIAL_MEDIA}"
+            echo "Your social media ${params.SOCIAL_MEDIA}"
             echo "Need to deploy ${params.DEPLOY}"
             echo "Your secret is ${params.SECRET}!"
         }
