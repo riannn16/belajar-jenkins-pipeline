@@ -104,6 +104,11 @@ pipeline {
         }
 
         stage("Deploy") {
+            input {
+                message "Can we deploy ?"
+                ok "Yes of course"
+                submitter "Rian"
+            }
             agent {
                 node {
             label "linux && java17"
