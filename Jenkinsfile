@@ -122,6 +122,22 @@ pipeline {
             }
         }
 
+        stage("Release") {
+            when {
+                expression {
+                    return param.DEPLOY
+                }
+            }
+            agent {
+                node {
+            label "linux && java17"
+                }
+            }
+            steps {
+                echo("Release it")
+            }
+        }
+
     }
 
     post {
