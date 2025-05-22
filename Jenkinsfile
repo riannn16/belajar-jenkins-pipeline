@@ -125,7 +125,7 @@ pipeline {
         stage("Release") {
             when {
                 expression {
-                    return param.DEPLOY
+                    return params.DEPLOY
                 }
             }
             agent {
